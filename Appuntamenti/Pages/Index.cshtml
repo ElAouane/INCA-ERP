@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+@*JUMBOTRON FIELD*@ 
+    <div class="jumbotron border text-white">
+        <div class="container">
+            <lead class="display-4"><b>Benvuto nel portale INCA cgil Bergamo</b></lead>
+            <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+            <hr class="my-4">
+            <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+            <p class="lead">
+                <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+            </p>
+        </div>
+    </div>
+
+@*SERVICE PROVIDED FIELD *@
+<div class="container">
+    <div class="row text-center " >
+            <div class="col-md-4 border-right mb-5">
+                <div class="card-title">
+                    <i class="fas fa-calendar-alt fa-3x" id="icons"></i>
+                    <h4 class="card-title">Appuntamenti</h4>
+                </div>
+                <div class="card-body">
+                    <p>Body text Body text Body text Body text Body text Body text Body text Body text Body text Body text </p>
+                </div>
+                <a class="btn btn-primary" asp-area="" asp-page="/Privacy">Appuntamenti</a>
+            </div>
+
+            <div class="col-md-4 border-right mb-5">
+                <div class="card-title">
+                    <i class="fas fa-user-tie fa-3x" id="icons"></i>
+                    <h4 class="card-title">Personale</h4>
+                </div>
+                <div class="card-body">
+                    <p>Body text Body text Body text Body text Body text Body text Body text Body text Body text Body text </p>
+                </div>
+                <a class="btn btn-primary" asp-area="" asp-page="/Privacy">Personale</a>
+            </div>
+
+            <div class="col-md-4  mb-5">
+                <div class="card-title">
+                    <i class="fas fa-file-pdf fa-3x" id="icons"></i>
+                    <h4 class="card-title">Documenti</h4>
+                </div>
+                <div class="card-body">
+                    <p>Body text Body text Body text Body text Body text Body text Body text Body text Body text Body text </p>
+                </div>
+                <a class="btn btn-primary" asp-area="" asp-page="/Privacy">Documenti</a>
+            </div>
+        </div>
+    </div>
