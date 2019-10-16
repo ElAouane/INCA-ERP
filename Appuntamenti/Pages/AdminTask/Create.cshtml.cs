@@ -11,6 +11,8 @@ namespace Appuntamenti.Pages.AdminTask
 {
     public class CreateModel : PageModel
     {
+        //RETRIEVE THE INFORMATION
+        //FROM THE ADMINTASK TO PASS THEM THAN TO CREATE.CS
         public AdminTasks AdminTask { get; set; }
         public IActionResult OnGet()
         {
