@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\Appuntamenti\\Appuntamenti.csproj": {}
+    "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\INCA-ERP\\Appuntamenti\\Appuntamenti.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\Appuntamenti\\Appuntamenti.csproj": {
+    "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\INCA-ERP\\Appuntamenti\\Appuntamenti.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\Appuntamenti\\Appuntamenti.csproj",
+        "projectUniqueName": "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\INCA-ERP\\Appuntamenti\\Appuntamenti.csproj",
         "projectName": "Appuntamenti",
-        "projectPath": "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\Appuntamenti\\Appuntamenti.csproj",
+        "projectPath": "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\INCA-ERP\\Appuntamenti\\Appuntamenti.csproj",
         "packagesPath": "C:\\Users\\Hamza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\Appuntamenti\\obj\\",
+        "outputPath": "C:\\Users\\Hamza\\Desktop\\INCA-ERP\\INCA-ERP\\Appuntamenti\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -62,7 +62,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[2.2.3, )"
+              "version": "[2.2.4, )"
             }
           },
           "imports": [
