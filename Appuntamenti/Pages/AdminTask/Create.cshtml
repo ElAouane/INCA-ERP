@@ -1,0 +1,48 @@
+﻿@page
+@model Appuntamenti.Pages.AdminTask.CreateModel
+@{
+    ViewData["Title"] = "Create";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br/>
+<h2 class="text-info">Create Admin Task</h2>
+<br/>
+<form method="post">
+    
+    <div class="border">
+        <div class="container">
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label asp-for="AdminTask.Name"></label>
+                </div>
+                <div class="col-md-5">
+                    <input asp-for="AdminTask.Name" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label asp-for="AdminTask.Description"></label>
+                </div>
+                <div class="col-md-5">
+                    <input asp-for="AdminTask.Description" class="form-control" />
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form-group row">
+                <div class="col-md-5 offset-2">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-success form-control" value="Create" />
+                        </div>
+                        <div class="col-md-6">
+                            <a asp-page="Tasks" class="btn btn-danger form-control">Back To List</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

@@ -1,0 +1,23 @@
+﻿@page
+@model Appuntamenti.Pages.AdminModel
+@{
+    ViewData["Title"] = "Admin";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br/>
+<div class="container">
+    <div class="row text-center">
+        <div class="col-md-3">
+            <div class="card-title">
+                <i class="fas fa-tasks fa-3x" id="icons"></i>
+                <h4 class="card-title">Admin Tasks</h4>
+            </div>
+            <div class="card-body">
+                <p>TODO List for Admin</p>
+            </div>
+            <a class="btn btn-primary" asp-area="" asp-page="/AdminTask/Tasks">Tasks</a>
+        </div>
+    </div>
+</div>
+
