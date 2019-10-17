@@ -101,7 +101,7 @@ namespace Appuntamenti.Areas.Identity.Pages.Account
                     {
                         await _roleManager.CreateAsync(new IdentityRole(SD.UserAccount));
                     }
-                    await _userManager.AddToRoleAsync(user, SD.AdminAccount);
+                    await _userManager.AddToRoleAsync(user, SD.UserAccount);
 
                     _logger.LogInformation("User created a new account with password.");
 
