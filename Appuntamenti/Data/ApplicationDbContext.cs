@@ -15,5 +15,6 @@ namespace Appuntamenti.Data
         }
 
         public DbSet<AdminTasks> AdminTasks { get; set; }
+        public DbSet<ApplicationUser> ApplicationUser { get; set; }
     }
 }

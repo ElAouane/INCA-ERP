@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Text.Encodings.Web;
 using System.Threading.Tasks;
+using Appuntamenti.Data;
+using Appuntamenti.Models;
+using Appuntamenti.Utility;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
@@ -19,17 +22,23 @@ namespace Appuntamenti.Areas.Identity.Pages.Account
         private readonly UserManager<IdentityUser> _userManager;
         private readonly ILogger<RegisterModel> _logger;
         private readonly IEmailSender _emailSender;
+        private readonly RoleManager<IdentityRole> _roleManager;
+        private readonly ApplicationDbContext _db;
 
         public RegisterModel(
             UserManager<IdentityUser> userManager,
             SignInManager<IdentityUser> signInManager,
             ILogger<RegisterModel> logger,
-            IEmailSender emailSender)
+            IEmailSender emailSender,
+            RoleManager<IdentityRole> roleManager,
+            ApplicationDbContext db)
         {
             _userManager = userManager;
             _signInManager = signInManager;
             _logger = logger;
             _emailSender = emailSender;
+            _roleManager = roleManager;
+            _db = db;
         }
 
         [BindProperty]
@@ -54,6 +63,12 @@ namespace Appuntamenti.Areas.Identity.Pages.Account
             [Display(Name = "Confirm password")]
             [Compare("Password", ErrorMessage = "The password and confirmation password do not match.")]
             public string ConfirmPassword { get; set; }
+
+
+            [Required]
+            public string Name { get; set; }
+            public string Surname { get; set; }
+            public string Area { get; set; }
         }
 
         public void OnGet(string returnUrl = null)
@@ -66,10 +81,28 @@ namespace Appuntamenti.Areas.Identity.Pages.Account
             returnUrl = returnUrl ?? Url.Content("~/");
             if (ModelState.IsValid)
             {
-                var user = new IdentityUser { UserName = Input.Email, Email = Input.Email };
+                var user = new ApplicationUser
+                { UserName = Input.Email,
+                    Email = Input.Email,
+                    Name = Input.Name,
+                    Surname = Input.Surname,
+                    Area = Input.Area,
+                };
                 var result = await _userManager.CreateAsync(user, Input.Password);
+
                 if (result.Succeeded)
                 {
+                    if(!await _roleManager.RoleExistsAsync(SD.AdminAccount))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.AdminAccount));
+                    }
+
+                    if (!await _roleManager.RoleExistsAsync(SD.UserAccount))
+                    {
+                        await _roleManager.CreateAsync(new IdentityRole(SD.UserAccount));
+                    }
+                    await _userManager.AddToRoleAsync(user, SD.AdminAccount);
+
                     _logger.LogInformation("User created a new account with password.");
 
                     var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
