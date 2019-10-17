@@ -53,6 +53,8 @@ namespace Appuntamenti.Pages.AdminTask
             var taskFromDb = await _db.AdminTasks.FirstOrDefaultAsync(s => s.Id == AdminTask.Id);
             taskFromDb.Name = AdminTask.Name;
             taskFromDb.Description = AdminTask.Description;
+            taskFromDb.Date = DateTime.Now;
+            
             await _db.SaveChangesAsync();
 
 

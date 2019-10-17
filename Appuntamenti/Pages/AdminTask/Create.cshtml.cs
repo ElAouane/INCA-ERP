@@ -14,6 +14,8 @@ namespace Appuntamenti.Pages.AdminTask
 
         private readonly ApplicationDbContext _db;
 
+        public DateTime date { get; set; }
+
         public CreateModel(ApplicationDbContext db)
         {
             _db = db;
@@ -39,6 +41,7 @@ namespace Appuntamenti.Pages.AdminTask
                 return Page();
             }
             _db.AdminTasks.Add(AdminTask);
+           
             await _db.SaveChangesAsync();
 
             return RedirectToPage("Tasks");

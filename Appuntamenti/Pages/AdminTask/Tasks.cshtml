@@ -36,7 +36,10 @@
                             @Html.DisplayNameFor(m => m.AdminTasks[0].Name)
                         </th>
                         <th>
-                            @Html.DisplayNameFor(m=> m.AdminTasks[0].Description) 
+                            @Html.DisplayNameFor(m => m.AdminTasks[0].Description)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(m => m.AdminTasks[0].Date)
                         </th>
                         <th></th>
                     </tr>
@@ -50,6 +53,9 @@
                 <td>
                     @Html.DisplayFor(m => item.Description)
                 </td>
+                 <td>
+                    @Html.DisplayFor(m => item.Date)
+                 </td>
                 <td style="width:150px;">
                     <div class="btn-group" role="group">
                         <a class="btn btn-primary text-white mr-2" asp-page="Edit" asp-route-Id="@item.Id">
