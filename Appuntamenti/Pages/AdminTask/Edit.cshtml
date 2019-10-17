@@ -1,23 +1,19 @@
 ﻿@page
-@model Appuntamenti.Pages.AdminTask.CreateModel
+@model Appuntamenti.Pages.AdminTask.EditModel
+
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Edit";
     Layout = "~/Pages/Shared/_Layout.cshtml";
 }
 
-@*
-==================================================
-ADMIN TASK
-CREATE PAGE
-===================================================
-*@
-<br/>
-<h2 class="text-info">Create Admin Task</h2>
-<br/>
+<br />
+<h2 class="text-info">Edit Admin Task</h2>
+<br />
 <form method="post">
-    
+
     <div class="border">
         <div class="container">
+            <input type="hidden" asp-for="AdminTask.Id" />
             <div class="form-group row">
                 <div class="col-md-2">
                     <label asp-for="AdminTask.Name"></label>
@@ -37,25 +33,22 @@ CREATE PAGE
                 <span asp-validation-for="AdminTask.Description" class="text-danger"></span>
             </div>
         </div>
-@*
-===================================================
-BUTTON CREATE AND
-BACK TO LIST
-===================================================
-*@
+        @*
+            ===================================================
+            BUTTON CREATE AND
+            BACK TO LIST
+            ===================================================
+        *@
         <div class="container">
             <div class="form-group row">
                 <div class="col-md-5 offset-2">
-                   <partial name="_CreateAndBackToListButton"/>
+                    <partial name="_EditAndBackToListButton" />
                 </div>
             </div>
         </div>
     </div>
 </form>
 
-@*partial view validation*@
-
-@section  Scripts{ 
-@{ await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
-

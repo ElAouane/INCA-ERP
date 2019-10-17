@@ -29,7 +29,7 @@
         }
         else
         {
-            <table class="table">
+            <table class="table table-striped">
                 <thead class="thead-light">
                     <tr>
                         <th>
@@ -43,15 +43,27 @@
                 </thead>
                 @foreach(var item in Model.AdminTasks)
                 {
-            <tr>
+             <tr>
                 <td>
                     @Html.DisplayFor(m => item.Name)
                 </td>
                 <td>
                     @Html.DisplayFor(m => item.Description)
                 </td>
-                <td></td>
-            </tr>
+                <td style="width:150px;">
+                    <div class="btn-group" role="group">
+                        <a class="btn btn-primary text-white mr-2" asp-page="Edit" asp-route-Id="@item.Id">
+                            <i class="fas fa-edit"></i>
+                        </a>
+                        <a class="btn btn-success text-white mr-2" asp-page="Details" asp-route-Id="@item.Id">
+                            <i class="fas fa-list"></i>
+                        </a>
+                        <a class="btn btn-danger text-white" asp-page="Delete" asp-route-Id="@item.Id">
+                            <i class="far fa-trash-alt"></i>
+                        </a>
+                    </div>
+                </td>
+             </tr>
                 }
             </table>
         }
