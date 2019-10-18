@@ -134,3 +134,4 @@ C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Ra
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_CreateAndBackToListButton.g.cshtml.cs
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\AdminTask\Edit.g.cshtml.cs
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_EditAndBackToListButton.g.cshtml.cs
+C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Index.g.cshtml.cs

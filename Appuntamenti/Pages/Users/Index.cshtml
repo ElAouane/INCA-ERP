@@ -1,0 +1,106 @@
+﻿@page
+@model Appuntamenti.Pages.Users.IndexModel
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+    <form method="get" asp-page="Index">
+        <br /> <br />
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="text-info">Users List</h2>
+            </div>
+            <div class="col-md-6 text-right">
+                <a asp-page="/Account/Register" asp-area="Identity" class="btn btn-primary mt-1"><i class="fas fa-plus"></i>&nbsp;Create New User</a>
+            </div>
+        </div>
+        
+            <div style="height:60px;" class="container">
+                <div class="row">
+                    <div class="col-md-11">
+                        <div class="row" style="padding-top:10px;">
+                            <div class="col-md-4">
+                                @Html.Editor("searchName", new { htmlAttributes = new { @class = "form-control", placeholder = "Name..." } })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.Editor("searchSurname", new { htmlAttributes = new { @class = "form-control", placeholder = "Surname..." } })
+                            </div>
+                            <div class="col-md-4">
+                                @Html.Editor("searchEmail", new { htmlAttributes = new { @class = "form-control", placeholder = "E-mail..." } })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-1">
+                        <div class="row" style="padding-top:10px; padding-right:20px;">
+                            <button type="submit" name="submit" value="Search" class="btn btn-success form-control">
+                                <i class="fas fa-search fa-1x"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+        <br/>
+        <div class="container ">
+            <table class="table table-striped border">
+                <thead class="thead-light">
+                    <tr>
+                        <th>
+                            <i class="fas fa-user"></i>
+                            @Html.DisplayNameFor(m => m.UsersListVM.ActiveUsers[0].Name)
+                        </th>
+                        <th>
+                            <i class="fas fa-user"></i>
+                            @Html.DisplayNameFor(m => m.UsersListVM.ActiveUsers[0].Surname)
+                        </th>
+                        <th>
+                            <i class="fas fa-envelope"></i>
+                            @Html.DisplayNameFor(m => m.UsersListVM.ActiveUsers[0].Email)
+                        </th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                @foreach (var item in Model.UsersListVM.ActiveUsers)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(m => item.Name)
+                        </td>
+                    
+                    
+                        <td>
+                            @Html.DisplayFor(m => item.Surname)
+                        </td>
+                    
+                    
+                        <td>
+                            @Html.DisplayFor(m => item.Email)
+                        </td>
+
+                        <td></td>
+
+                        <td>
+                            <a class="btn btn-primary text-white mr-2" asp-page="Edit" asp-route-Id="@item.Id">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <a class="btn btn-danger text-white" asp-page="Delete" asp-route-Id="@item.Id">
+                                <i class="far fa-trash-alt"></i>
+                            </a>
+                        </td>
+                    </tr>
+                }
+
+                <tr>
+                    <td colspan="5" class="text-right">
+                        <div page-model="@Model.UsersListVM.PaginationInfo" asp-action="Index" page-class="btn border"
+                             page-class-normal="btn btn-light" page-class-selected="btn btn-info active" class="btn-group">
+
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+

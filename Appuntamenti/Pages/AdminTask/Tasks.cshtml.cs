@@ -4,16 +4,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Appuntamenti.Data;
 using Appuntamenti.Models;
+using Appuntamenti.Utility;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 
 namespace Appuntamenti.Pages.AdminTask
 {
-    
 
 
-    
+
+    [Authorize(Roles = SD.AdminAccount)]
     public class TasksModel : PageModel
     {
 
