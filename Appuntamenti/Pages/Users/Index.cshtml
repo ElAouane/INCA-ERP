@@ -15,33 +15,33 @@
                 <a asp-page="/Account/Register" asp-area="Identity" class="btn btn-primary mt-1"><i class="fas fa-plus"></i>&nbsp;Create New User</a>
             </div>
         </div>
-        
-            <div style="height:60px;" class="container">
-                <div class="row">
-                    <div class="col-md-11">
-                        <div class="row" style="padding-top:10px;">
-                            <div class="col-md-4">
-                                @Html.Editor("searchName", new { htmlAttributes = new { @class = "form-control", placeholder = "Name..." } })
-                            </div>
-                            <div class="col-md-4">
-                                @Html.Editor("searchSurname", new { htmlAttributes = new { @class = "form-control", placeholder = "Surname..." } })
-                            </div>
-                            <div class="col-md-4">
-                                @Html.Editor("searchEmail", new { htmlAttributes = new { @class = "form-control", placeholder = "E-mail..." } })
-                            </div>
+
+        <div style="height:60px;" class="container">
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="row" style="padding-top:10px;">
+                        <div class="col-md-4">
+                            @Html.Editor("searchName", new { htmlAttributes = new { @class = "form-control", placeholder = "Name..." } })
                         </div>
-                    </div>
-                    <div class="col-md-1">
-                        <div class="row" style="padding-top:10px; padding-right:20px;">
-                            <button type="submit" name="submit" value="Search" class="btn btn-success form-control">
-                                <i class="fas fa-search fa-1x"></i>
-                            </button>
+                        <div class="col-md-4">
+                            @Html.Editor("searchSurname", new { htmlAttributes = new { @class = "form-control", placeholder = "Surname..." } })
+                        </div>
+                        <div class="col-md-4">
+                            @Html.Editor("searchEmail", new { htmlAttributes = new { @class = "form-control", placeholder = "E-mail..." } })
                         </div>
                     </div>
                 </div>
+                <div class="col-md-1">
+                    <div class="row" style="padding-top:10px; padding-right:20px;">
+                        <button type="submit" name="submit" value="Search" class="btn btn-success form-control">
+                            <i class="fas fa-search fa-1x"></i>
+                        </button>
+                    </div>
+                </div>
             </div>
-        
-        <br/>
+        </div>
+
+        <br />
         <div class="container ">
             <table class="table table-striped border">
                 <thead class="thead-light">
@@ -62,19 +62,21 @@
                         <th></th>
                     </tr>
                 </thead>
+
+
                 @foreach (var item in Model.UsersListVM.ActiveUsers)
                 {
                     <tr>
                         <td>
                             @Html.DisplayFor(m => item.Name)
                         </td>
-                    
-                    
+
+
                         <td>
                             @Html.DisplayFor(m => item.Surname)
                         </td>
-                    
-                    
+
+
                         <td>
                             @Html.DisplayFor(m => item.Email)
                         </td>
@@ -91,7 +93,6 @@
                         </td>
                     </tr>
                 }
-
                 <tr>
                     <td colspan="5" class="text-right">
                         <div page-model="@Model.UsersListVM.PaginationInfo" asp-action="Index" page-class="btn border"
@@ -102,5 +103,6 @@
                 </tr>
             </table>
         </div>
+       
     </form>
 
