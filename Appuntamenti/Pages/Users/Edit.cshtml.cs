@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Appuntamenti.Data;
 using Appuntamenti.Models;
 using Appuntamenti.Models.ViewModel;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
@@ -22,15 +23,15 @@ namespace Appuntamenti.Pages.Users
 
         [BindProperty]
         public ApplicationUser Users { get; set; }
-        public async Task<IActionResult> OnGetAsync(string Email)
+        public async Task<IActionResult> OnGetAsync(string id)
         {
-            
-            
-            //if (Email == null)
-            //{
-            //    return NotFound();
-            //}
-            Users = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Email == Email);
+
+
+            if (id == null)
+            {
+                return NotFound();
+            }
+            Users = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Id == id);
 
             if (Users == null)
             {
@@ -46,7 +47,7 @@ namespace Appuntamenti.Pages.Users
                 return Page();
             }
 
-            var UserFromDb = await _db.ApplicationUser.FirstOrDefaultAsync(s => s.Email == Users.Email);
+            var UserFromDb = await _db.ApplicationUser.FirstOrDefaultAsync(s => s.Id == Users.Id);
             UserFromDb.Name = Users.Name;
             UserFromDb.Surname = Users.Surname;
             UserFromDb.Email = Users.Email;

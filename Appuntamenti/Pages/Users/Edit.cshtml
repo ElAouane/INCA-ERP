@@ -12,7 +12,8 @@
 <form method="post">
     <div class="border">
         <div class="container">
-            <input type="hidden" asp-for="Users.Email" />
+            <input type="hidden" asp-for="Users.Id" />
+            
             <div class="form-group row">
                 <div class="col-md-2">
                     <label asp-for="Users.Name"></label>
@@ -29,13 +30,28 @@
                     <input asp-for="Users.Surname" class="form-control" />
                 </div>
             </div>
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label asp-for="Users.Email"></label>
+                </div>
+                <div class="col-md-5">
+                    <input asp-for="Users.Email" class="form-control" />
+                </div>
+            </div>
         </div>
 
 
         <div class="container">
             <div class="form-group row">
                 <div class="col-md-5 offset-2">
-                    <partial name="_EditAndBackToListButton" />
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="submit" class="btn btn-success form-control" value="Update" />
+                        </div>
+                        <div class="col-md-6">
+                            <a asp-page="../Users/Index" class="btn btn-danger form-control">Back To List</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
