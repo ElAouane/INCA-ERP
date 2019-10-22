@@ -1,0 +1,44 @@
+﻿@page
+@model Appuntamenti.Pages.Users.EditModel
+@{
+    ViewData["Title"] = "Edit";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+
+<br />
+<h2 class="text-info">Edit Admin Task</h2>
+<br />
+
+<form method="post">
+    <div class="border">
+        <div class="container">
+            <input type="hidden" asp-for="Users.Email" />
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label asp-for="Users.Name"></label>
+                </div>
+                <div class="col-md-5">
+                    <input asp-for="Users.Name" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label asp-for="Users.Surname"></label>
+                </div>
+                <div class="col-md-5">
+                    <input asp-for="Users.Surname" class="form-control" />
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+            <div class="form-group row">
+                <div class="col-md-5 offset-2">
+                    <partial name="_EditAndBackToListButton" />
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+

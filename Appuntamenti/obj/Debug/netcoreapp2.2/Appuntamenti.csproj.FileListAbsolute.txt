@@ -70,7 +70,6 @@ C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\bin\Debug\netcoreapp2.2\Ap
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\bin\Debug\netcoreapp2.2\Appuntamenti.pdb
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\bin\Debug\netcoreapp2.2\Appuntamenti.Views.dll
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\bin\Debug\netcoreapp2.2\Appuntamenti.Views.pdb
-C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Appuntamenti.csprojAssemblyReference.cache
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Appuntamenti.csproj.CoreCompileInputs.cache
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Appuntamenti.RazorAssemblyInfo.cache
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Appuntamenti.RazorAssemblyInfo.cs
@@ -135,3 +134,5 @@ C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Ra
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\AdminTask\Edit.g.cshtml.cs
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\Shared\_EditAndBackToListButton.g.cshtml.cs
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Index.g.cshtml.cs
+C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Edit.g.cshtml.cs
+C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Appuntamenti.csprojAssemblyReference.cache

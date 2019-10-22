@@ -1,24 +1,26 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
 
+
+
 body {
     font-family: 'Poppins', sans-serif;
     background: #fafafa;
 }
 
-#prova {
-    max-height:80px;
-}
+
+
 #icons {
     color: #FF8C00;
     margin-bottom: 10px;
 }
 .jumbotron {
-    margin-bottom:50px;
-    background: none;
-    opacity:0.8;
-    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url("../img/cosa-vedere-in-citta-alta-in-un-giornola-mappa-smart-per-il-tour-perfetto_4e9730ac-8a39-11e6-a688-5603d5f04f2c_998_397_original.jpg");
-    background-size: 100% 100%;
+    margin-bottom:10px;
+    background-image:url(../img/cosa-vedere-in-citta-alta-in-un-giornola-mappa-smart-per-il-tour-perfetto_4e9730ac-8a39-11e6-a688-5603d5f04f2c_998_397_original.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
+    min-height:400px;
 }
 
 .jumbo_text {

@@ -9,6 +9,6 @@ namespace Appuntamenti.Utility
     {
         public const string AdminAccount = "Admin";
         public const string UserAccount = "User";
-        public const int PaginationUsersPageSize = 2;
+        public const int PaginationUsersPageSize = 4;
     }
 }
