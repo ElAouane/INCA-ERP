@@ -1,0 +1,44 @@
+﻿@page
+@model Appuntamenti.Pages.Users.DetailsModel
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Pages/Shared/_Layout.cshtml";
+}
+@using Appuntamenti.Utility
+
+<h1>Details</h1>
+<div class="container border" style="max-width:800px;">
+    <div class="row">
+        <div class="img-fluid text-center">
+            <img src="~/img/calendar.jpg" style="max-height:140px; max-width:140px;" />
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <table class="table table-hover" style="min-width:780px;">
+                @foreach (var item in Model.DetailUser)
+                {
+                    <tr>
+                        <th scope="row">@Html.DisplayNameFor(m => m.DetailUser[0].Name)</th>
+                        <td>@Html.DisplayFor(m => item.Name)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">@Html.DisplayNameFor(m => m.DetailUser[0].Surname)</th>
+                        <td>@Html.DisplayFor(m => item.Surname)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">@Html.DisplayNameFor(m => m.DetailUser[0].Email)</th>
+                        <td>@Html.DisplayFor(m => item.Email)</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">@Html.DisplayNameFor(m => m.DetailUser[0].Area)</th>
+                        <td>@Html.DisplayFor(m => item.Area)</td>
+                    </tr>
+                }
+            </table>
+            
+    </div>
+</div>
+

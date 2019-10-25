@@ -138,3 +138,4 @@ C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Ra
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Delete.g.cshtml.cs
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Appuntamenti.csprojAssemblyReference.cache
 C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\AdminTask\Delete.g.cshtml.cs
+C:\Users\Hamza\Desktop\INCA-ERP\INCA-ERP\Appuntamenti\obj\Debug\netcoreapp2.2\Razor\Pages\Users\Details.g.cshtml.cs
