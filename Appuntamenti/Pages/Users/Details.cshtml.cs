@@ -31,7 +31,6 @@ namespace Appuntamenti.Pages.Users
             {
                 return NotFound();
             }
-            //DetailUser = await _db.ApplicationUser.FirstOrDefaultAsync(m => m.Id == id);
             DetailUser = await _db.ApplicationUser.Where(m => m.Id == id).ToListAsync();
 
 
